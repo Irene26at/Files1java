@@ -1,0 +1,15 @@
+import java.io.*;
+public class TestWrite
+{
+    public static void main (String[] args) {
+        try{
+            FileOutputStream f = new FileOutputStream("/home/Test.txt");
+            f.write(7);
+            f.close();
+        }
+        catch(IOException e)
+        {
+            System.out.println(e);
+        }
+    }
+}
