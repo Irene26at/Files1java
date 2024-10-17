@@ -1,0 +1,18 @@
+import java.io.*;
+public class TestCopy
+{
+    public static void main (String[] args) {
+        try{
+                FileInputStream f = new FileInputStream("/home/Test.txt");
+                FileOutputStream f1 = new FileOutputStream("/home/TestDemo.txt");
+                f1.write(f.read());
+                f.close();
+                f1.close();
+        }
+        catch(IOException e)
+        {
+            System.out.println(e);
+        }
+        
+    }
+}
